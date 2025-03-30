@@ -121,7 +121,7 @@ The Flutter frontend communicates with the Express backend via HTTP API calls. U
 import 'package:http/http.dart' as http;
 
 Future<void> fetchHealth() async {
-  final response = await http.get(Uri.parse('http://localhost:3000/'));
+  final response = await http.get(Uri.parse('http://localhost:3000/api/health'));
   if (response.statusCode == 200) {
     print('Server is healthy');
   } else {
