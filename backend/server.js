@@ -1,11 +1,11 @@
 // server.js
 
 // Load environment variables from .env.local
-require('dotenv').config({ path: '.env.local' });
+require("dotenv").config({ path: ".env.local" });
 
-const express = require('express');
-const cors = require('cors');
-const { createClient } = require('@supabase/supabase-js');
+const express = require("express");
+const cors = require("cors");
+const { createClient } = require("@supabase/supabase-js");
 
 // Initialize Express app
 const app = express();
@@ -20,15 +20,15 @@ const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
-  console.error('Supabase credentials are not set in .env.local');
+  console.error("Supabase credentials are not set in .env.local");
   process.exit(1);
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Basic health check endpoint to confirm the server is running
-app.get('/', (req, res) => {
-  res.send('Express server is running.');
+app.get("/", (req, res) => {
+  res.send("Express server is running.");
 });
 
 // Start the Express server

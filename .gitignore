@@ -2,7 +2,7 @@
 /backend/node_modules/
 backend/dist/
 backend/*.log
-backend/.env*
+backend/.env.local
 /backend/coverage/
 
 # Flutter Frontend
